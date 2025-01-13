@@ -1,4 +1,3 @@
-// src/components/CompanyTable.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -35,7 +34,7 @@ const CompanyTable = () => {
                         <tr key={company.id}>
                             <td>{company.id}</td>
                             <td>{company.name}</td>
-                            <td>{company.skill}</td> {/* Access related skill name */}
+                            <td>{company.skill.skill}</td> 
                         </tr>
                     ))}
                 </tbody>
