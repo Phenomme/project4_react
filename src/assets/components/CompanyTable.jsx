@@ -3,6 +3,7 @@ import axios from "axios";
 
 const CompanyTable = () => {
     const [companies, setCompanies] = useState([]);
+    const [skills, setSkills] = useState([]);
     const [formData, setFormData] = useState({ name: "", skill: "" });
     const [error, setError] = useState("");
     const [isEditing, setIsEditing] = useState(false);
@@ -18,6 +19,17 @@ const CompanyTable = () => {
                 console.error("Error fetching companies:", error);
             }
         };
+
+        const fetchSkills = async () => {
+            try {
+                const response = await axios.get("http://127.0.0.1:8000/api/skills/");
+                setSkills(response.data);
+            } catch (error) {
+                console.error("Error fetching skills:", error);
+            }
+        };
+
+        fetchSkills();
 
         fetchCompanies();
     }, []);
