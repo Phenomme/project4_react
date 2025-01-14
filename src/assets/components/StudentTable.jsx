@@ -121,10 +121,11 @@ const StudentTable = () => {
             </table>
 
             <h2>{isEditing ? "Edit Student" : "Add New Student"}</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="container">
                 <div>
                     <label>Name:</label>
                     <input
+                        className="input"
                         type="text"
                         name="name"
                         value={formData.name}
@@ -135,6 +136,7 @@ const StudentTable = () => {
                 <div>
                     <label>Age:</label>
                     <input
+                        className="input"
                         type="number"
                         name="age"
                         value={formData.age}
@@ -145,6 +147,7 @@ const StudentTable = () => {
                 <div>
                     <label>Skill:</label>
                     <select
+                        className="input"
                         name="skill"
                         value={formData.skill}
                         onChange={handleChange}

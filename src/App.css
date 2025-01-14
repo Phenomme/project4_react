@@ -1,21 +1,31 @@
 /* General Styles */
 body {
+    display: grid;
+    justify-self: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white; /* Solid white background */
+    background-color: black; /* Solid white background */
     color: black;
 }
 
 /* Container Styling */
 .container {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); Two columns with responsive widths */
+    gap: 20px; /* Space between the tables */
+    justify-content: center;
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 10px; /* Center the container horizontally */
     padding: 20px;
-    background-color: lightgray; /* Light gray for contrast */
+    background-color: lightblue; /* Light gray for contrast */
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Table Styling */
@@ -23,7 +33,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    background-color: white; /* Solid white table background */
+    background-color: rgb(125, 198, 222); /* Solid white table background */
     border: 2px solid black; /* Black border for contrast */
 }
 
@@ -40,7 +50,10 @@ table td {
 }
 
 table tbody tr:nth-child(even) {
-    background-color: gainsboro; /* Light gray for alternate rows */
+    background-color: rgb(125, 198, 222); /* Light gray for alternate rows */
+}
+.input{
+    background-color: rgb(191, 178, 235);
 }
 
 table tbody tr:hover {
@@ -98,6 +111,7 @@ form select {
     box-sizing: border-box;
     font-size: 14px;
     background-color: ghostwhite; /* Very light gray background for input fields */
+    color: black;
 }
 
 form button {

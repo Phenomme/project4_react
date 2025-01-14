@@ -20,7 +20,7 @@ const CompatibleTable = () => {
     }, []);
 
     return (
-        <div>
+        <div className="container">
             <h1>Compatible Students and Companies</h1>
             {error && <p style={{ color: "red" }}>{error}</p>}
             <table border="1">

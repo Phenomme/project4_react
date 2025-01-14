@@ -100,7 +100,7 @@ const CompanyTable = () => {
                         <th>ID</th>
                         <th>Company Name</th>
                         <th>Skill</th>
-                
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -119,10 +119,11 @@ const CompanyTable = () => {
             </table>
 
             <h2>{isEditing ? "Edit Company" : "Add New Company"}</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="container">
                 <div>
                     <label>Company Name:</label>
                     <input
+                        className="input"
                         type="text"
                         name="name"
                         value={formData.name}
@@ -133,6 +134,7 @@ const CompanyTable = () => {
                 <div>
                     <label>Skill:</label>
                     <select
+                        className="input"
                         name="skill"
                         value={formData.skill}
                         onChange={handleChange}
