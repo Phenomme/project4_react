@@ -41,6 +41,7 @@ const CompatibleTable = () => {
                     ))}
                 </tbody>
             </table>
+            
         </div>
     );
 };
