@@ -92,7 +92,7 @@ const StudentTable = () => {
     };
 
     return (
-        <div>
+        <div className="container">
             <h1>Students</h1>
             <table border="1">
                 <thead>

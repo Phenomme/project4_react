@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Solid white background */
+    color: black;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: lightgray; /* Light gray for contrast */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white; /* Solid white table background */
+    border: 2px solid black; /* Black border for contrast */
+}
+
+table thead tr {
+    background-color: blue; /* Solid blue header */
+    color: white; /* White text for contrast */
+    text-align: left;
+}
+
+table th,
+table td {
+    padding: 10px 15px;
+    border: 1px solid black; /* Black border for cells */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: gainsboro; /* Light gray for alternate rows */
+}
+
+table tbody tr:hover {
+    background-color: lightblue; /* Light blue for hover */
+    cursor: pointer;
+}
+
+/* Button Styling */
+button {
+    background-color: blue; /* Solid blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: darkblue; /* Darker blue for hover effect */
+}
+
+button:disabled {
+    background-color: gray; /* Gray for disabled buttons */
+    cursor: not-allowed;
+}
+
+/* Form Styling */
+form {
+    background-color: white; /* Solid white form background */
+    padding: 20px;
+    border: 2px solid black; /* Black border for form */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid black; /* Black border for input fields */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: ghostwhite; /* Very light gray background for input fields */
+}
+
+form button {
+    margin-top: 10px;
+}
+
+/* Error Message */
+.error {
+    color: red; /* Solid red for error messages */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Header Styling */
+h1 {
+    color: black; /* Solid black header text */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h2 {
+    margin-top: 0;
+    color: black; /* Solid black subheader text */
+    font-size: 20px;
+}
