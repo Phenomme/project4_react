@@ -2,7 +2,9 @@ import React from "react";
 import CompanyTable from "./assets/components/CompanyTable";
 import SkillTable from "./assets/components/SkillTable";
 import StudentTable from "./assets/components/StudentTable";
+import "./App.css";
 import CompatibleTable from "./assets/components/CompatibleTable";
+
 function App() {
     return (
         <>
