@@ -3,7 +3,7 @@ import axios from "axios";
 
 const CompanyTable = () => {
     const [companies, setCompanies] = useState([]);
-    const [formData, setFormData] = useState({ name: "", industry: "" });
+    const [formData, setFormData] = useState({ name: "", skill: "" });
     const [error, setError] = useState("");
     const [isEditing, setIsEditing] = useState(false);
     const [editingCompanyId, setEditingCompanyId] = useState(null);
@@ -42,7 +42,7 @@ const CompanyTable = () => {
                 );
                 setIsEditing(false);
                 setEditingCompanyId(null);
-                setFormData({ name: "", industry: "" });
+                setFormData({ name: "", skill: "" });
             } catch (error) {
                 console.error("Error updating company:", error);
                 setError("Failed to update company. Please check your input.");
@@ -52,7 +52,7 @@ const CompanyTable = () => {
             try {
                 const response = await axios.post("http://127.0.0.1:8000/api/companies/", formData);
                 setCompanies([...companies, response.data]);
-                setFormData({ name: "", industry: "" });
+                setFormData({ name: "", skill: "" });
             } catch (error) {
                 console.error("Error adding company:", error);
                 setError("Failed to add company. Please check your input.");
@@ -65,7 +65,7 @@ const CompanyTable = () => {
         setEditingCompanyId(company.id);
         setFormData({
             name: company.name,
-            industry: company.industry,
+            skill: company.skill,
         });
     };
 
@@ -87,8 +87,8 @@ const CompanyTable = () => {
                     <tr>
                         <th>ID</th>
                         <th>Company Name</th>
-                        <th>Industry</th>
-                        <th>Actions</th>
+                        <th>Skill</th>
+                
                     </tr>
                 </thead>
                 <tbody>
@@ -96,7 +96,7 @@ const CompanyTable = () => {
                         <tr key={company.id}>
                             <td>{company.id}</td>
                             <td>{company.name}</td>
-                            <td>{company.industry}</td>
+                            <td>{company.skill.skill}</td>
                             <td>
                                 <button onClick={() => handleEdit(company)}>Update</button>
                                 <button onClick={() => handleDelete(company.id)}>Delete</button>
@@ -119,14 +119,20 @@ const CompanyTable = () => {
                     />
                 </div>
                 <div>
-                    <label>Industry:</label>
-                    <input
-                        type="text"
-                        name="industry"
-                        value={formData.industry}
+                    <label>Skill:</label>
+                    <select
+                        name="skill"
+                        value={formData.skill}
                         onChange={handleChange}
                         required
-                    />
+                    >
+                        <option value="">Select a skill</option>
+                        {skills.map((skill) => (
+                            <option key={skill.id} value={skill.id}>
+                                {skill.skill}
+                            </option>
+                        ))}
+                    </select>
                 </div>
                 <button type="submit">
                     {isEditing ? "Update Company" : "Add Company"}
