@@ -10,6 +10,7 @@ body {
     padding: 0;
     background-color: black; /* Solid white background */
     color: black;
+    
 }
 
 /* Container Styling */
@@ -38,7 +39,7 @@ table {
 }
 
 table thead tr {
-    background-color: blue; /* Solid blue header */
+    background-color: rgb(51, 51, 238); /* Solid blue header */
     color: white; /* White text for contrast */
     text-align: left;
 }
@@ -63,7 +64,7 @@ table tbody tr:hover {
 
 /* Button Styling */
 button {
-    background-color: blue; /* Solid blue */
+    background-color: rgb(51, 51, 238); /* Solid blue */
     color: white;
     border: none;
     padding: 10px 20px;
